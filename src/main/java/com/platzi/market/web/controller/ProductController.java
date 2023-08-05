@@ -34,7 +34,7 @@ public class ProductController {
     }
 
     @PostMapping
-    public ResponseEntity<Product> save(Product product) {
+    public ResponseEntity<Product> save(@RequestBody Product product) {
         return new ResponseEntity<>(productService.save(product), HttpStatus.CREATED);
     }
 
